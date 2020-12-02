@@ -1,5 +1,4 @@
 var fs = require('fs');
-// var http = require('http');
 
 fs.readFile('./data.txt', function (err, data) {
   data = data.toString();
@@ -9,7 +8,6 @@ fs.readFile('./data.txt', function (err, data) {
     puzzle = data[i].split(' ');
     nums = puzzle[0].split('-').map((string) => parseInt(string));
     letter = puzzle[1][0];
-    console.log(nums[0], nums[1], letter, puzzle[2]);
     found = 0;
     if (puzzle[2][nums[0] - 1] == letter) {
       found++;

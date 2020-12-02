@@ -1,5 +1,4 @@
 var fs = require('fs');
-var http = require('http');
 
 fs.readFile('./data.txt', function (err, data) {
   data = data.toString();
